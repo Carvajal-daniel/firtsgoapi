@@ -1,6 +1,10 @@
 package router
 
-import "github.com/gin-gonic/gin"
+import (
+	"fmt"
+
+	"github.com/gin-gonic/gin"
+)
 
 func Initialize() {
 	//Initialize the router
@@ -10,5 +14,8 @@ func Initialize() {
 	InitializeRoutes(router)
 
 	//Run the Server
-	router.Run(":4100")
+	const port = ":4100"
+	fmt.Println("🚀 Server running on http://localhost:4100")
+	router.Run(port)
+
 }
