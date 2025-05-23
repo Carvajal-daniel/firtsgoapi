@@ -13,11 +13,11 @@ func InitializeRoutes(router *gin.Engine) {
 
 		v1.POST("/opening", handlers.CreateHandlerOpening)
 
-		v1.DELETE("/opening/:id", handlers.DeleteHandlerOpening)
+		v1.DELETE("/opening", handlers.DeleteHandlerOpening)
 
-		v1.PUT("/opening/:id", handlers.UpdateHandlerOpening)
+		v1.PUT("/opening", handlers.UpdateHandlerOpening)
 
-		v1.GET("/openings/:id", handlers.ListHandlerOpening)
+		v1.GET("/openings", handlers.ListHandlerOpening)
 	}
 
 }
